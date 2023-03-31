@@ -7,7 +7,7 @@
     <h1 class="display-5 fw-bold lh-1 mb-3 subtitle px-5">MEET THE TEAM</h1>
 
     <div class="px-5">
-      <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
+      <div class="row row-cols-2 row-cols-lg-4 align-items-stretch g-4 py-5">
         <div
           class="col"
           v-for="person in people"
@@ -32,13 +32,13 @@
 
     <div class="container col-xxl-8 px-4 pt-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">HARROW SCHOOL</h1>
           <p class="lead">
             Harrow School is a public school in Harrow on the Hill, Greater London, England. The school was founded in 1572 by John Lyon, a local landowner and farmer, under a Royal Charter of Queen Elizabeth I. <br> <br> The school has an enrolment of about 820 boys, all of whom board full-time, in twelve boarding houses.
           </p>
         </div>
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 mx-auto">
           <img
             src="~/assets/harrowschool.jpg"
             class="d-block mx-lg-auto rounded img-fluid"
@@ -55,14 +55,14 @@
         <h1 class="display-5 text-white subtitle">DEPARTMENTS</h1>
 
         <div class="row pt-4 mx-3">
-          <div class="col-lg-6">
+          <div class="col-lg-6 mx-auto">
             <span class="material-icons glanceicon">construction</span>
 
             <h2>Design Technology and Engineering</h2>
           </div>
          
           <!-- /.col-lg-4 -->
-          <div class="col-lg-6">
+          <div class="col-lg-6 mx-auto">
             <span class="material-icons glanceicon">straighten
 </span>
 
@@ -75,7 +75,7 @@
 
     <div class="container col-xxl-8 px-4 pt-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 mx-auto">
           <img
             src="https://www.reds10.com/wp-content/uploads/2015/12/Harrow-School-Design-and-Technology-Suite.jpg"
             class="d-block mx-lg-auto rounded img-fluid"
@@ -84,7 +84,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">THE WORKSHOP</h1>
           <p class="lead">
            The Design Technology and Engineering workshop has everything we need to make a great robot. We meet there every Thursday.
@@ -187,26 +187,52 @@
 h2 {
   overflow-y: hidden;
 }
-.subtitle {
-  font-size: 6rem;
-  font-family: 'League Gothic', sans-serif;
-  line-height: 1.2;
-  letter-spacing: 0.5rem;
-  color: #001a46;
-  overflow-y: hidden;
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 4rem;
+    font-family: 'League Gothic', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    color: #001a46;
+    overflow-y: hidden;
+  }
+  .gold {
+    color: #cba33a;
+    font-size: 5em; /* adjust font size as needed */
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 6rem;
+  }
 }
+
+/* if on desktop media q */
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 6rem;
+    font-family: 'League Gothic', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.5rem;
+    color: #001a46;
+    overflow-y: hidden;
+  }
+  .gold {
+    color: #cba33a;
+    font-size: 15em; /* adjust font size as needed */
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 0.5rem;
+    line-height: 13rem;
+  }
+
+}
+
 .role {
   color: #cba33a;
   font-size: 3em; /* adjust font size as needed */
   font-family: 'League Gothic', sans-serif;
 }
-.gold {
-  color: #cba33a;
-  font-size: 15em; /* adjust font size as needed */
-  font-family: 'League Gothic', sans-serif;
-  letter-spacing: 0.5rem;
-  line-height: 13rem;
-}
+
+
+
 .text {
   overflow-y: hidden;
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="imageparent">
+    <div class="imageparent d-none d-lg-block">
       <div class="text px-5">
         <span class="gold">TEAM</span><br /><span class="gold">EUCLID</span
         ><br /><span class="blue">ROBOTICS</span>
@@ -22,9 +22,18 @@
       <img src="~assets/robot.gif" class="robotgif" />
     </div>
 
-    <div class="container col-xxl-8 px-4 pt-5">
+    <div class="imageparentmobile d-block d-lg-none">
+  <svg class="gearmobile" viewBox="0 0 1077 1075">
+    <image xlink:href="~/assets/gear.svg" width="1077" height="1075"></image>
+  </svg>
+  <svg class="lionmobile" viewBox="0 0 1158 1320">
+    <image xlink:href="~/assets/lion.svg" width="1158" height="1320"></image>
+  </svg>
+</div>
+
+    <div class="container col-xxl-8 px-4 pt-lg-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 mx-auto">
           <img
             src="~/assets/DSC01785.jpg"
             class="d-block mx-lg-auto rounded img-fluid"
@@ -33,7 +42,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">WHO ARE WE?</h1>
           <p class="lead">
             <span style="color: #cba33a; font-weight: 500;"><b>We're Team Euclid.</b></span> We are
@@ -50,7 +59,7 @@
       </div>
     </div>
 
-    <div class="movercontainer" id="movercontainer">
+    <div class="movercontainer  d-none d-lg-block" id="movercontainer">
       <div class="mover" id="car">
         <div>
           <h1>22640<img style="height:15rem" src="~/assets/robot.png"></h1> 
@@ -96,14 +105,14 @@
 
     <div class="container col-xxl-8 px-4 pt-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">WHAT IS FTC?</h1>
           <p class="lead">
             
             <span style="color: #cba33a; font-weight: 500;"><b>FTC stands for FIRST Tech Challenge, which is a robotics competition for middle and high school students. </b></span> <br> <br> In this competition, teams of students design, build, and program robots to compete in various challenges that test their technical skills and creativity. FTC aims to inspire students to pursue careers in science, technology, engineering, and math (STEM) fields by providing them with hands-on experience in robotics and problem-solving. <br> <br>The program also emphasizes the importance of teamwork, collaboration, and gracious professionalism, which are essential skills for success in any field.
           </p>
         </div>
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 mx-auto">
           <img
             src="~/assets/20230325_181520.jpg"
             class="d-block mx-lg-auto rounded img-fluid"
@@ -128,7 +137,7 @@
 
     <div class="container col-xxl-8 px-4 pt-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 mx-auto">
           <img
             src="~/assets/20230325_185827.jpg"
             class="d-block mx-lg-auto rounded img-fluid"
@@ -137,7 +146,7 @@
             loading="lazy"
           />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">OUR SUCCESSES</h1>
           <p class="lead">
             <span style="color: #cba33a; font-weight: 500;"><b>Our team started in late 2022.</b></span> We recently participated in the South East UK FTC Regional tournament, where we placed 4th in the qualifying competition. We then formed an alliance, which won the elimination match series. <br><br> We are currently preparing for the UK National Championship in June at Cambridge University, where we hope to place in the top 10 teams in the UK. 
@@ -151,11 +160,34 @@
 </template>
 
 <style scoped>
-.mover h1 {
-  font-family: "League Gothic", sans-serif;
-  font-size: 15rem;
-  color: #001a46;
+
+.imageparentmobile {
+  position: relative;
+  width: 100%;
+  height: 35vh;
 }
+
+.gearmobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: auto;
+  transform: translate(-50%, -50%) rotate(0);
+  animation: rotate-gear 10s linear infinite;
+  transform-origin: center center;
+}
+
+.lionmobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
 .movercontainer {
   width: 100%;
   height: 20rem;
@@ -172,14 +204,32 @@
 h2 {
   overflow-y: hidden;
 }
-.subtitle {
-  font-size: 6rem;
-  font-family: 'League Gothic', sans-serif;
-  line-height: 1.2;
-  letter-spacing: 0.5rem;
-  color: #001a46;
-  overflow-y: hidden;
+
+/* if on mobile media q */
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 4rem;
+    font-family: 'League Gothic', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    color: #001a46;
+    overflow-y: hidden;
+  }
 }
+
+/* if on desktop media q */
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 6rem;
+    font-family: 'League Gothic', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.5rem;
+    color: #001a46;
+    overflow-y: hidden;
+  }
+}
+
+
 .imageparent {
   position: relative;
   width: 100%;
@@ -274,6 +324,7 @@ h2 {
     transform: translate3d(2px, 0, 0);
   }
 }
+
 </style>
 
 <script>

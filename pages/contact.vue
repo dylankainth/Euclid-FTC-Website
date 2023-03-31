@@ -144,20 +144,42 @@
 h2 {
   overflow-y: hidden;
 }
-.subtitle {
-  font-size: 6rem;
-  font-family: 'League Gothic', sans-serif;
-  line-height: 1.2;
-  letter-spacing: 0.5rem;
-  color: #001a46;
-  overflow-y: hidden;
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 4rem;
+    font-family: 'League Gothic', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    color: #001a46;
+    overflow-y: hidden;
+  }
+  .gold {
+    color: #cba33a;
+    font-size: 5em; /* adjust font size as needed */
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 6rem;
+  }
 }
-.gold {
-  color: #cba33a;
-  font-size: 15em; /* adjust font size as needed */
-  font-family: 'League Gothic', sans-serif;
-  letter-spacing: 0.5rem;
-  line-height: 13rem;
+
+/* if on desktop media q */
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 6rem;
+    font-family: 'League Gothic', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.5rem;
+    color: #001a46;
+    overflow-y: hidden;
+  }
+  .gold {
+    color: #cba33a;
+    font-size: 15em; /* adjust font size as needed */
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 0.5rem;
+    line-height: 13rem;
+  }
+
 }
 .text {
   overflow-y: hidden;
