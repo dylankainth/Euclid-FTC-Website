@@ -478,7 +478,7 @@ export default {
           interests: ['AI', 'Maths', 'Programming'],
           fun_fact:
             'He likes cookies, and is obsessed with fourier transforms.',
-          image: 'andy.jpg',
+          image: 'alexy.jpg',
           links: [
             { 
               image: 'github.svg',
