@@ -35,7 +35,13 @@
         <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">HARROW SCHOOL</h1>
           <p class="lead">
-            Harrow School is a public school in Harrow on the Hill, Greater London, England. The school was founded in 1572 by John Lyon, a local landowner and farmer, under a Royal Charter of Queen Elizabeth I. <br> <br> The school has an enrolment of about 820 boys, all of whom board full-time, in twelve boarding houses.
+            Harrow School is a public school in Harrow on the Hill, Greater
+            London, England. The school was founded in 1572 by John Lyon, a
+            local landowner and farmer, under a Royal Charter of Queen Elizabeth
+            I. <br />
+            <br />
+            The school has an enrolment of about 820 boys, all of whom board
+            full-time, in twelve boarding houses.
           </p>
         </div>
         <div class="col-10 col-sm-8 col-lg-6 mx-auto">
@@ -60,18 +66,18 @@
 
             <h2>Design Technology and Engineering</h2>
           </div>
-         
+
           <!-- /.col-lg-4 -->
           <div class="col-lg-6 mx-auto">
-            <span class="material-icons glanceicon">straighten
-</span>
+            <span class="material-icons glanceicon">straighten </span>
 
             <h2>Physics</h2>
           </div>
           <!-- /.col-lg-4 -->
         </div>
       </div>
-    </div>.
+    </div>
+    .
 
     <div class="container col-xxl-8 px-4 pt-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -87,10 +93,10 @@
         <div class="col-lg-6 mx-auto">
           <h1 class="display-5 fw-bold lh-1 mb-3 subtitle">THE WORKSHOP</h1>
           <p class="lead">
-           The Design Technology and Engineering workshop has everything we need to make a great robot. We meet there every Thursday.
+            The Design Technology and Engineering workshop has everything we
+            need to make a great robot. We meet there every Thursday.
           </p>
         </div>
-        
       </div>
     </div>
 
@@ -130,21 +136,25 @@
             </div>
 
             <span class="role">{{ toUpperCase(selectedperson.role) }}</span>
-            
+
             <p>
-            {{ selectedperson.joining_reasons }}
-          </p>
+              {{ selectedperson.joining_reasons }}
+            </p>
 
-          <p>
-            Interests: {{ selectedperson.interests.toString() }}
-          </p>
+            <p>Interests: {{ selectedperson.interests.toString() }}</p>
 
-          <p>
-            Fun Fact: {{ selectedperson.fun_fact }}
-          </p>
+            <p>Fun Fact: {{ selectedperson.fun_fact }}</p>
+
+
+            <div class="row justify-content-start">
+              <div class="col-2" v-for="link in selectedperson.links" :key="link.url">
+                <a :href="link.url" target="_blank">
+                  <img style="width:3rem;height:3rem" :src="require(`~/assets/${link.image}`)">
+                </a>
+              </div>
+            </div>
 
           </div>
-       
         </div>
       </div>
     </div>
@@ -222,7 +232,6 @@ h2 {
     letter-spacing: 0.5rem;
     line-height: 13rem;
   }
-
 }
 
 .role {
@@ -230,8 +239,6 @@ h2 {
   font-size: 3em; /* adjust font size as needed */
   font-family: 'League Gothic', sans-serif;
 }
-
-
 
 .text {
   overflow-y: hidden;
@@ -338,6 +345,12 @@ export default {
           interests: ['Robotics', 'AeroAstro', 'Nuclear'],
           fun_fact: 'Has built a Nuclear Fusion Reactor',
           image: 'luca.jpg',
+          links: [
+            { 
+              image: 'linkedin.svg',
+              url: 'https://www.linkedin.com/in/luca-sa/',
+            },
+          ]
         },
 
         {
@@ -353,6 +366,16 @@ export default {
           fun_fact:
             'Dylan is well known for bad puns in his maths and physics classes.',
           image: 'dylan.jpg',
+          links: [
+            { 
+              image: 'website.svg',
+              url: 'https://dylankainth.com/',
+            },
+            { 
+              image: 'github.svg',
+              url: 'https://github.com/dylankainth',
+            }
+          ]
         },
 
         {
@@ -387,6 +410,12 @@ export default {
           interests: ['Science Fiction', 'Contact Bridge', 'Programming'],
           fun_fact: 'Hayden comes from Mars.',
           image: 'hayden.jpg',
+          links: [
+            { 
+              image: 'github.svg',
+              url: 'https://github.com/hayden1126',
+            },
+          ]
         },
 
         {
@@ -417,6 +446,12 @@ export default {
           interests: ['Problem Solving', 'Maths', 'Programming'],
           fun_fact: "He's a foodie",
           image: 'andrew.jpg',
+          links: [
+            { 
+              image: 'github.svg',
+              url: 'https://github.com/s3yoonpark',
+            },
+          ]
         },
 
         {
@@ -444,6 +479,13 @@ export default {
           fun_fact:
             'He likes cookies, and is obsessed with fourier transforms.',
           image: 'andy.jpg',
+          links: [
+            { 
+              image: 'github.svg',
+              url: 'https://github.com/ywq0321',
+            },
+          ]
+          
         },
 
         {
