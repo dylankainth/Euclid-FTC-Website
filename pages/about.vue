@@ -362,7 +362,7 @@ export default {
             'Dylan has helped host FLL Jr at previous school, he captained team to FLL UK national finals 2018',
           joining_reasons:
             'Dylan wished to further his programming skills in Java. He also wanted to gain expertise with mentoring and managing a subteam.',
-          interests: ['Python', 'Greenpower Electric Car', 'Microelectronics'],
+          interests: ['Servers', 'F24 Greenpower', 'Microelectronics', 'Web Development'],
           fun_fact:
             'Dylan is well known for bad puns in his maths and physics classes.',
           image: 'dylan.jpg',
