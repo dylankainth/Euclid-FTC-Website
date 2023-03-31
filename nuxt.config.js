@@ -4,15 +4,18 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Euclid-FTC-Website',
+    title: 'FTC Team Euclid Robotics',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'The Official Website of Team Euclid Robotics.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name:"google-site-verification", content:"2wGomeWzokZgPr2h8SwIv6sAJoZeW55hUcSFIa_Xxfc"},
+      { name:"google",content:"nositelinkssearchbox"},
+
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/logo.png' },
