@@ -22,22 +22,13 @@ const generateEmail = (text = {}) => {
 exports.handler = async (event, context) => {
     const { name, email, message } = JSON.parse(event.body);
     
-    // const transporter = nodemailer.createTransport({
-    //     host: process.env.MAIL_HOST,
-    //     port: process.env.MAIL_PORT,
-    //     auth: {
-    //     user: process.env.MAIL_USER,
-    //     pass: process.env.MAIL_PASS,
-    //     },
-    // });
-
     const transporter = nodemailer.createTransport({
         host: 'smtp.zoho.eu',
         port: 465,
         secure: true,
         auth: {
-            user: 'teameuclid@zohomail.eu',
-            pass: 'Timodore87'
+            user: process.env.MAIL_USER,
+            pass: process.env.MAIL_PASS
         }
     });
 
